@@ -1,0 +1,31 @@
+{
+	"name": "bind-cli",
+	"version": "0.1.1",
+	"description": "CLI interface for BIND DNS",
+	"license": "MIT",
+	"repository": "apnex/bind-cli",
+	"author": {
+		"name": "Andrew Obersnel"
+	},
+	"bin": {
+		"bind-cli": "./lib/bind-cli.js"
+	},
+	"engines": {
+		"node": ">=8"
+	},
+	"files": [
+		"/lib"
+	],
+	"keywords": [
+		"bind",
+		"bind-cli",
+		"dns",
+		"dns-cli",
+		"rndc",
+		"nodejs",
+		""
+	],
+	"dependencies": {
+		"heredoc": "*"
+	}
+}
