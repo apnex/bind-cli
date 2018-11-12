@@ -1,6 +1,6 @@
 {
 	"name": "bind-cli",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "CLI interface for BIND DNS",
 	"license": "MIT",
 	"repository": "apnex/bind-cli",
