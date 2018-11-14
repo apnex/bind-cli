@@ -8,6 +8,6 @@ echo "-- removing orphaned volumes --"
 docker rm -f $(docker ps -qa -f status=exited) 2>/dev/null
 
 echo "-- starting constellation --"
-	#-v ${PWD}:/root/code \
 docker run -d -P --net host \
+	-v ${PWD}:/root/code \
 	--name dns apnex/bind-cli
