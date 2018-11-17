@@ -1,0 +1,30 @@
+[
+	{
+		"name": "sddc.lab",
+		"addr": "172.16.0.11"
+	},
+	{
+		"name": "boot.lab",
+		"addr": "172.16.0.1"
+	},
+	{
+		"name": "vcenter.lab",
+		"addr": "172.16.10.13"
+	},
+	{
+		"name": "nsxm01.lab",
+		"addr": "172.16.10.15"
+	},
+	{
+		"name": "nsxc01.lab",
+		"addr": "172.16.10.16"
+	},
+	{
+		"name": "nsxe01.lab",
+		"addr": "172.16.10.18"
+	},
+	{
+		"name": "oms.lab",
+		"addr": "172.16.10.25"
+	}
+]
