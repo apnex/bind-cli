@@ -1,0 +1,27 @@
+logging {
+        channel "default_syslog" {
+                file "/var/log/named.log" versions 3 size 5m;
+                severity debug;
+        };
+        category default { default_syslog; };
+        category general { default_syslog; };
+        category config { default_syslog; };
+        category security { default_syslog; };
+        category resolver { default_syslog; };
+        category xfer-in { default_syslog; };
+        category xfer-out { default_syslog; };
+        category notify { default_syslog; };
+        category client { default_syslog; };
+        category network { default_syslog; };
+        category update { default_syslog; };
+        category queries { default_syslog; };
+        category lame-servers { default_syslog; };
+};
+controls {   
+	inet 127.0.0.1 allow { localhost; } 
+	keys { dnsctl; };
+};
+key "dnsctl" {   
+	algorithm hmac-md5;   
+	secret "S9agqVPtjiI=";
+};

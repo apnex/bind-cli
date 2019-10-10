@@ -27,13 +27,21 @@ BIND will also forward to `8.8.8.8` and `8.8.8.4` for dns queries without a loca
 yum install bind bind-utils
 ```
 
+#### Create /var/bind directory with correct permissions
+```shell
+mkdir -p /var/bind
+chown named:named /var/bind
+chmod 777 /var/bind
+```
+
 System conf files are crafted as follows;  
 
-##### /etc/bind/named.conf
+##### /etc/named.conf
 This is the base BIND server configuration, including upstream forwarders.  
 ```shell
 options {
 	directory "/var/bind";
+	session-keyfile "/var/bind/session.key";
 	allow-query	{ 0.0.0.0/0; };
 	allow-transfer	{ 0.0.0.0/0; };
 	allow-new-zones yes;
@@ -80,7 +88,7 @@ key "dnsctl" {
 };
 ```
 
-##### /etc/bind/rndc.conf
+##### /etc/rndc.conf
 This configures a local shared-secret key for the RNDC client to interact with BIND.  
 The key name and secret must match those configured in **/etc/bind/named.conf.local**  
 ```shell

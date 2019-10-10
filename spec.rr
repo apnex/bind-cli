@@ -1,0 +1,24 @@
+Diagram(
+	Terminal('nsx-cli'),
+	NonTerminal('<cmd>'),
+	Optional(
+		Sequence(
+			Choice(1,
+				NonTerminal('<name-value>'),
+				'.',
+				OneOrMore(
+					Sequence(
+						NonTerminal('<field>'),
+						':',
+						NonTerminal('<value>')
+					),
+					Terminal(',')
+				),
+			),
+			Optional(
+				NonTerminal('<format>'),
+				'skip'
+			)
+		)
+	)
+)
