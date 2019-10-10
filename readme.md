@@ -90,7 +90,7 @@ key "dnsctl" {
 
 ##### /etc/rndc.conf
 This configures a local shared-secret key for the RNDC client to interact with BIND.  
-The key name and secret must match those configured in **/etc/bind/named.conf.local**  
+The key name and secret must match those configured in **/var/bind/named.conf.local**  
 ```shell
 options {   
 	default-server  localhost;   
