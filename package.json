@@ -26,7 +26,7 @@
 		""
 	],
 	"dependencies": {
-		"chalk": "*",
+		"chalk": "^4",
 		"heredoc": "^1.3.1"
 	}
 }
